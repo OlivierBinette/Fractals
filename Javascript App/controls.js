@@ -1,23 +1,20 @@
 
-/**
- * @author Olivier Binette
- * 
- * Copyright (c) 2014 Olivier Binette
- * Licensed under the MIT license */
-
-var menuShowing = false;
+var menuShowing;
+hideMenu( );
 
 function toggleMenu() {
-	menuShowing = !menuShowing;
 	if(menuShowing)
-		document.getElementById("menu").style.display = "block";
+		hideMenu();
 	else
-		document.getElementById("menu").style.display = "none";
+		showMenu();
 };
 
 function hideMenu() {
-	if(menuShowing) {
-		document.getElementById("menu").style.display = "none";
-		menuShowing = false;
-	}
+	document.getElementById( 'menu' ).style.display = 'none';
+	menuShowing = false;
+};
+
+function showMenu() {
+	document.getElementById( 'menu' ).style.display = 'block';
+	menuShowing = true;
 };

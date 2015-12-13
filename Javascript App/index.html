@@ -10,62 +10,55 @@
     </head>
     
     <body>
-  		<canvas id="canvas" width ="0" height="0" onclick="hideMenu()"></canvas>
-  		<img id="menuIcon" class="hoverEnabled" src="icon.svg" width="40px" onclick="toggleMenu()"/>
-  		<div id="menu">
+  		<canvas id="canvas" onclick="hideMenu()"></canvas>
+  		
+  		<img id="menuIcon" class="hoverEnabled" src="icon.svg" width="30px" onclick="toggleMenu()"/>
+  		
+  		<div id="menu" onkeydown="if (event.keyCode == 13) refreshGenerator()">
 	  		<table>
 	  			<tr>
-		  			<td id="iterationsLabel" class="label">
-		  				Iterations :
+		  			<td id="iterationsLabel">
+		  				<label for="iterationsInput">Iterations :</label>
 		  			</td>
 		  			<td>
-		  				<input id="iterationsInput" type="number" min=10 max=100000 value=300 class="field">
+		  				<input id="iterationsInput" type="number" min=10 max=100000 value=300 step=10 class="field">
 		  			</td>
 	  			</tr>
 	  			<tr>
-		  			<td id="colorBleedingLabel" class="label">
-		  				Color bleeding : 
+		  			<td id="colorBleedingLabel">
+		  				<label for="paramInput">Color bleeding :</label>
 		  			</td>
 		  			<td>
-		  				<input id="paramInput" type="number" min=1 max=100000 value=100 class="field">
+		  				<input id="paramInput" type="number" min=10 max=100000 value=100 step=10 class="field">
 		  			</td>
 	  			</tr>
 	  			<tr>
-		  			<td id="colorOffsetInput" class="label">
-		  				Color offset : 
+		  			<td id="colorOffsetInput">
+		  				<label for="offsetInput">Color offset :</label>
 		  			</td>
 		  			<td>
 		  				<input id="offsetInput" type="number" value=0 class="field">
 		  			</td>
 	  			</tr>
 	  			<tr>
-		  			<td id="sampleLabel" class="label">
-		  				Sample : 
+		  			<td id="sampleLabel">
+		  				<label for="samplingInput">Sample :</label>
 		  			</td>
 		  			<td>
 		  				<input id="samplingInput" type="number" min=1 max=100 value=2 class="field">
 		  			</td>
 		  		</tr>
-		  		<!--<tr>
-		  			<td id="renderingStepsLabel" class="label">
-		  				Rendering steps : 
-		  			</td>
-		  			<td>
-		  				<input if="stepsInput" type="number" min=0 max=10 value=5 class="field" si>
-		  			</td>
-		  		</tr>-->
 	  		</table>
-	  		<div id="buttonWrapper">
-				<button id="resetButton" class="button" onclick="refreshGenerator()">Refresh</button>
-	  		</div>
+	  		<div class="separator"></div>
+			<button id="resetButton" class="button buttonHover" onclick="refreshGenerator()">Refresh</button>
   		</div>
-    </body>
 
+    </body>
     <script src="controls.js"></script>
     <script src="lib/hammer.js"></script>
 	<script src="lib/plugins/hammer.fakemultitouch.js"></script>
 	<script src="lib/plugins/hammer.showtouches.js"></script>
     <script src="script.js"></script>
-    <script src="Main.js"></script>
+    <script src="main.js"></script>
     
 </html>

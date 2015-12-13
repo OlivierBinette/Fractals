@@ -208,6 +208,7 @@ function Mandelbrot( ) {
     var DEFAULT_MAX_POSITION = 400.0;
     //@format:false
     var DEFAULT_COLOR_GRADIENT = new ColorGradient( DEFAULT_MAX_POSITION, [ new Color( 0, 7, 100 ),
+    	new Color( 32, 107, 203 ),
         new Color( 237, 255, 255 ),
         new Color( 255, 160, 0 ),
         new Color( 160, 100, 0 ),

@@ -1,6 +1,8 @@
 # Fractals
 A Javascript Mandelbrot set explorer and it's more experimental (and performant) Java counterpart.
 
+![alt tag](Screenshot.png)
+
 ##Javascript App
 
 See it running [here](http://olivierbinette.github.io/Fractals/index.html). You will need to adjust the image parameters with the menu as you zoom in. It's multi-touch compatible.

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+    <head>
+    	<link rel="stylesheet" type="text/css" href="style.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <title>The Mandelbrot Set</title>
+    </head>
+    
+    <body>
+  		<canvas id="canvas" onclick="hideMenu()"></canvas>
+  		
+  		<img id="menuIcon" class="hoverEnabled" src="icon.svg" width="30px" onclick="toggleMenu()"/>
+  		
+  		<div id="menu" onkeydown="if (event.keyCode == 13) refreshGenerator()">
+	  		<table>
+	  			<tr>
+		  			<td id="iterationsLabel">
+		  				<label for="iterationsInput">Iterations :</label>
+		  			</td>
+		  			<td>
+		  				<input id="iterationsInput" type="number" min=10 max=100000 value=300 step=10 class="field">
+		  			</td>
+	  			</tr>
+	  			<tr>
+		  			<td id="colorBleedingLabel">
+		  				<label for="paramInput">Color bleeding :</label>
+		  			</td>
+		  			<td>
+		  				<input id="paramInput" type="number" min=10 max=100000 value=100 step=10 class="field">
+		  			</td>
+	  			</tr>
+	  			<tr>
+		  			<td id="colorOffsetInput">
+		  				<label for="offsetInput">Color offset :</label>
+		  			</td>
+		  			<td>
+		  				<input id="offsetInput" type="number" value=0 class="field">
+		  			</td>
+	  			</tr>
+	  			<tr>
+		  			<td id="sampleLabel">
+		  				<label for="samplingInput">Sample :</label>
+		  			</td>
+		  			<td>
+		  				<input id="samplingInput" type="number" min=1 max=100 value=2 class="field">
+		  			</td>
+		  		</tr>
+	  		</table>
+	  		<div class="separator"></div>
+			<button id="resetButton" class="button buttonHover" onclick="refreshGenerator()">Refresh</button>
+  		</div>
+
+    </body>
+    <script src="controls.js"></script>
+    <script src="lib/hammer.js"></script>
+	<script src="lib/plugins/hammer.fakemultitouch.js"></script>
+	<script src="lib/plugins/hammer.showtouches.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+    
+</html>

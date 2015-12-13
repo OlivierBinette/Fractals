@@ -3,7 +3,7 @@ A Javascript Mandelbrot set explorer and it's more experimental (and performant)
 
 ##Javascript App
 
-See it running [here][http://olivierbinette.github.io/Fractals/index.html].
+See it running [here](http://olivierbinette.github.io/Fractals/index.html).
 
 ##Java App
 
@@ -19,4 +19,5 @@ Here is a list of commands to type in:
 - `color offset [n]`      Default n=0. Changes the background color (0 < n < color bleeding).
 - `escape radius 1`       If you like bubbles.
 - `reset`
+
 Most of the application's internal parameters can be accessed in this way. The commands can be very loosly typed in. This feature was used during demonstrations, as it also allowed to change the color gradient, lock the zooming center to a specific point, and set boundaries.

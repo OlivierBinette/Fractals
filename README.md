@@ -3,11 +3,11 @@ A Javascript Mandelbrot set explorer and it's more experimental (and performant)
 
 ![alt tag](Screenshot.png)
 
-##Javascript App
+## Javascript App
 
 See it running [here](http://olivierbinette.github.io/Fractals/index.html). You will need to adjust the image parameters with the menu as you zoom in. It's multi-touch compatible.
 
-##Java App
+## Java App
 
 Made with Alexandre Audet-Bouchard as a Cégep school project in 2013-2014. This is a slightly more polished version, with less features, of the original app. 
 

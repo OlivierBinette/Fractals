@@ -79,6 +79,26 @@ body {
 	user-select: none;
 }
 
+#helpMenu:after {
+    position: absolute;
+    top: -8px;
+    right: 60px;
+    display: inline-block;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    border-left: 8px solid transparent;
+    content: "";
+}
+#helpMenu:before {
+    position: absolute;
+    top: -9px;
+    right: 60px;
+    display: inline-block;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #888;
+    border-left: 9px solid transparent;
+    content: "";
+}
 
 #tip {
 	width: 10; 
@@ -221,6 +241,7 @@ label {
 
 li {
 	margin-left: 10px;
-	font-size: 11pt;
+	margin-right: 10px;
+	font-size: 10pt;
 	line-height: 14pt;
 }

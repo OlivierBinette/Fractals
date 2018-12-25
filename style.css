@@ -2,6 +2,14 @@ body {
 	margin: 0;
 	height: 100%;
 	overflow: hidden;
+	
+	font-family: helvetica;
+	font-weight: lighter;
+	color: #444;
+	vertical-align: text-bottom;
+	margin-top: auto;
+	margin-bottom: auto;
+	
 }
 
 #menu:after {
@@ -47,6 +55,30 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+#helpMenu {
+	display: none;
+	position: absolute;
+	top: 70px;
+	right: 8px;
+	border-style:solid;
+	border-radius: 3px;
+	border-width:1px;
+	border-color: #888;
+	background-color: white;
+	padding-top: 12px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 1px 1px 8px #555;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 
 #tip {
 	width: 10; 
@@ -97,6 +129,20 @@ label {
 	border-bottom: 1px solid #aaa;
 	margin-top: 10px;
 	margin-bottom: 13px
+}
+
+#helpIcon {
+	position: absolute;
+	top: 8px;
+	right: 63px;
+}
+
+#helpIcon:hover {
+	background: url("helpIcon-s1.svg") no-repeat;
+}
+
+#helpIcon:active {
+	background: url("helpIcon-s2.svg") no-repeat;
 }
 
 #menuIcon {
@@ -172,3 +218,9 @@ label {
 	top:1px;
 }
 
+
+li {
+	margin-left: 10px;
+	font-size: 11pt;
+	line-height: 14pt;
+}

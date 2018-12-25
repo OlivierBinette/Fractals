@@ -6,13 +6,42 @@
     	<link rel="stylesheet" type="text/css" href="style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-        <title>The Mandelbrot Set</title>
+        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/a/a7/Mandelbrot_set_image.png" />
+	<title>The Mandelbrot Set</title>
     </head>
     
     <body>
   		<canvas id="canvas" onclick="hideMenu()"></canvas>
   		
+  		<img id="helpIcon" src="helpIcon.svg" width="30px" onclick="toggleHelp()"/>
+  		
   		<img id="menuIcon" class="hoverEnabled" src="icon.svg" width="30px" onclick="toggleMenu()"/>
+  		
+  		
+  		
+  		<div id="helpMenu" class="menu" style="padding: 5px; padding-top: 15px; width: 80%; max-width: 240px;">
+			<table>
+				<tr>
+					<li>Drag around to move.</li>
+				</tr>
+				<tr>
+					<li>Double click or use mouse wheel to zoom.</li>
+				</tr>
+				<tr>
+					<li>Increase the number of iterations (up to 30k) for more details.</li>
+				</tr>
+				<tr>
+					<li>Tweek the "color bleed" field to change the scale of the color gradient.</li>
+				</tr>
+				<tr>
+					<li>Tweek the color offset to change the background color.</li>
+				</tr>
+				<tr>
+					<li>Increase the value of "sample" (up to 3-4) to increase the smoothness of the image.</li>
+				</tr>
+			</table>
+  		</div>
+  		
   		
   		<div id="menu" onkeydown="if (event.keyCode == 13) refreshGenerator()">
 	  		<table>

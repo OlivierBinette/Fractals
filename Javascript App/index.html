@@ -13,7 +13,35 @@
     <body>
   		<canvas id="canvas" onclick="hideMenu()"></canvas>
   		
+  		<img id="helpIcon" src="helpIcon.svg" width="30px" onclick="toggleHelp()"/>
+  		
   		<img id="menuIcon" class="hoverEnabled" src="icon.svg" width="30px" onclick="toggleMenu()"/>
+  		
+  		
+  		
+  		<div id="helpMenu" class="menu" style="padding: 15px; width: 80%; max-width: 240px;">
+			<table>
+				<tr>
+					<li>Drag around to move.</li>
+				</tr>
+				<tr>
+					<li>Double click or use mouse wheel to zoom.</li>
+				</tr>
+				<tr>
+					<li>Increase the number of iterations (up to 30k) for more details.</li>
+				</tr>
+				<tr>
+					<li>Tweek the "color bleed" field to change the scale of the color gradient.</li>
+				</tr>
+				<tr>
+					<li>Tweek the color offset to change the background color.</li>
+				</tr>
+				<tr>
+					<li>Increase the value of "sample" (up to 3-4) to increase the smoothness of the image.</li>
+				</tr>
+			</table>
+  		</div>
+  		
   		
   		<div id="menu" onkeydown="if (event.keyCode == 13) refreshGenerator()">
 	  		<table>

@@ -39,6 +39,26 @@ function onDoubleTapHammer( e ) {
 }
 
 /*
+ * Zooms on double click.
+ */
+function onDoubleClickHandler( e ) {
+
+    e.preventDefault();
+    if(debugging) { console.log( 'Event : doubleclick' ); console.log( e ); console.log( 'end' ); }
+
+    nav.zoom( -0.4, //zoom in
+        workerNav.p0.x + workerNav.getWidth() * e.pageX/ canvas.width, 
+        workerNav.p0.y + workerNav.getHeight() * e.pageY / canvas.height 
+    );
+
+    instruction = JSON.stringify( new WorkerMessage( 'generate', new GeneratorInstruction( nav, 1, canvas.width, canvas.height ) ) );
+    createWorker( instruction );
+
+}
+
+
+
+/*
  * Defines the position of the drag start.
  */
 function onDragStartHammer( e ) {
@@ -369,6 +389,7 @@ else {
     canvas.onmousedown = onMouseDownHandler;
     canvas.addEventListener( 'DOMMouseScroll', onMouseWheelHandler, false ); //Firefox
     canvas.addEventListener( 'mousewheel', onMouseWheelHandler, false ); //Others, but for old IE (which I don't care about).
+	canvas.addEventListener('dblclick', onDoubleClickHandler, false)
 }
 
 
